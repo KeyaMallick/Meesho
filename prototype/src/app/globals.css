@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* Brand tokens: shared with print/assets/print.css */
+:root {
+  --plum: #570d48;
+  --plum-soft: #f6e9f3;
+  --magenta: #d94bd9;
+  --orange: #ff9f00;
+  --orange-soft: #fff1d6;
+  --coral: #f2475b;
+  --cyan: #3fd3e6;
+  --cream: #fff3d7;
+  --ink: #2a1426;
+  --muted: #6e5a69;
+  --line: #d9c9d4;
+  --desk: #e9e4e8;
+
+  /* WhatsApp look-alike palette */
+  --wa-header: #008069;
+  --wa-bg: #efeae2;
+  --wa-out: #d9fdd3;
+  --wa-in: #ffffff;
+  --wa-tick: #53bdeb;
+  --wa-meta: #667781;
+  --wa-text: #111b21;
+  --wa-green: #25d366;
+
+  /* Buyer marketplace look */
+  --mkt: #9f2089;
+  --mkt-soft: #fdf1fb;
+}
+
+@theme inline {
+  --color-plum: var(--plum);
+  --color-plum-soft: var(--plum-soft);
+  --color-magenta: var(--magenta);
+  --color-orange: var(--orange);
+  --color-orange-soft: var(--orange-soft);
+  --color-coral: var(--coral);
+  --color-cyan: var(--cyan);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-desk: var(--desk);
+  --color-wa-header: var(--wa-header);
+  --color-wa-bg: var(--wa-bg);
+  --color-wa-out: var(--wa-out);
+  --color-wa-in: var(--wa-in);
+  --color-wa-tick: var(--wa-tick);
+  --color-wa-meta: var(--wa-meta);
+  --color-wa-text: var(--wa-text);
+  --color-wa-green: var(--wa-green);
+  --color-mkt: var(--mkt);
+  --color-mkt-soft: var(--mkt-soft);
+
+  --font-sans: var(--font-poppins), var(--font-hind), system-ui, sans-serif;
+  --font-hindi: var(--font-hind), var(--font-poppins), sans-serif;
+  --font-bangla: var(--font-hind-siliguri), var(--font-poppins), sans-serif;
+}
+
+html,
+body {
+  background: var(--desk);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* WhatsApp doodle wallpaper, drawn as a light inline SVG pattern */
+.wa-wallpaper {
+  background-color: var(--wa-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d6cfc4' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' opacity='.7'%3E%3Ccircle cx='18' cy='20' r='6'/%3E%3Cpath d='M52 14l6 10h-12z'/%3E%3Crect x='86' y='12' width='14' height='10' rx='2'/%3E%3Cpath d='M14 62c4-6 10-6 14 0'/%3E%3Cpath d='M58 56v12M52 62h12'/%3E%3Ccircle cx='96' cy='62' r='4'/%3E%3Cpath d='M20 100l8-6 8 6'/%3E%3Cpath d='M56 98c0-5 8-5 8 0s-8 5-8 0'/%3E%3Cpath d='M90 96h14v8H90z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
