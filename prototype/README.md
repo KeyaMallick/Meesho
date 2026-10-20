@@ -1,5 +1,7 @@
 # Meesho Dukaan · Demo website
 
+**Live: https://meesho-dukaan.vercel.app** · [Story](https://meesho-dukaan.vercel.app/story) · [Try it](https://meesho-dukaan.vercel.app/try)
+
 Prototype for the DICE Challenge 3.0 semi-final. One Next.js app: a guided 90-day story (`/story`), a live AI sandbox (`/try`) and a cover page (`/`). Full plan in [design.md](./design.md).
 
 ## Run locally
@@ -15,6 +17,10 @@ Checks: `pnpm test` (story script integrity), `pnpm typecheck`, `pnpm lint`, `pn
 ## Deploy (Vercel)
 
 No separate backend: `/api/listing` deploys as a serverless function with the pages.
+
+The live site is deployed from the CLI, not from Git, so pushing to GitHub doesn't update it. To redeploy, run `vercel deploy --prod --yes` from `prototype/`.
+
+To set it up from scratch on another account:
 
 1. Push the repo to GitHub → vercel.com → **Add New… → Project** → import it.
 2. Set **Root Directory** to `prototype`.
